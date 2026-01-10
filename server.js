@@ -1,5 +1,6 @@
 import express from "express"
 import teraboxRoute from "./terabox.js"
+import instagramv2 from "./instagramv2.js"
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -9,6 +10,7 @@ app.use(express.json())
 
 // Routes
 app.use("/api", teraboxRoute)
+app.use("/api", instagramv2)
 
 // Test route
 app.get("/", (req, res) => {
